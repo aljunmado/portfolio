@@ -95,6 +95,14 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     }
 
+    .link-underline {
+      text-decoration: underline;
+    }
+
+    .link-underline:hover {
+      text-decoration-thickness: 2px;
+    }
+
     /* SKILLS */
     .skill-grid {
       display: grid;
@@ -207,7 +215,7 @@
   <section class="hero reveal">
     <div class="hero-content">
       <h1>Al Jun Mado</h1>
-      <span><i>Associate Software Engineer | Virtual Assistant</i></span>
+      <span><em>Associate Software Engineer | Virtual Assistant</em></span>
       <p style="margin-top:20px; text-align: justify;">
         Associate Software Engineer with a strong background in remote operations, CRM systems, and customer-facing technical support. Experienced in data handling, process improvement, and cross-functional collaboration, supported by formal training in SDLC, Python, SQL, Power BI, and applied Generative AI tools. Built and deployed an accessible web platform using HTML, CSS, and JavaScript. Known for adaptability, problem-solving, and translating real-world business requirements into practical technical solutions.
       </p>
@@ -230,6 +238,31 @@
       <div class="skill">UI / UX Design</div>
       <div class="skill">Project Management</div>
       <div class="skill">Digital Marketing & E-commerce</div>
+    </div>
+  </section>
+
+  <!-- IT BOOTCAMP -->
+  <section class="reveal">
+    <h2>IT Bootcamp</h2>
+    <div class="card">
+      <h3>Nanays in IT Program</h3>
+      <p><em>Accenture, PBSP & YMCA</em></p>
+      <p style="margin-top:12px; text-align: justify;">
+        An intensive, industry-aligned IT bootcamp focused on building practical, entry-level competencies
+        for Associate Software Engineer roles. The program emphasizes foundational software development,
+        data handling, IT support, and the applied use of modern tools including analytics platforms
+        and Generative AI.
+      </p>
+      <ul style="padding-left: 20px; margin-top: 12px;">
+        <li><strong>Software Development:</strong> SDLC fundamentals, Python programming, SQL & database design</li>
+        <li><strong>Data & Analytics:</strong> Power BI reporting, data analysis foundations</li>
+        <li><strong>IT & Security:</strong> IT support fundamentals, cybersecurity basics</li>
+        <li><strong>AI & Productivity:</strong> ChatGPT & Generative AI for content and workflow support</li>
+        <li><strong>Professional Skills:</strong> Project management, UX fundamentals, digital business concepts</li>
+      </ul>
+      <p style="margin-top:12px;">
+        Related certificates are available in the <a href="#training-certificates" class="link-underline">Training & Certificates</a> section below.
+      </p>
     </div>
   </section>
 
@@ -315,7 +348,7 @@
   </section>
 
   <!-- CERTIFICATES -->
-  <section class="reveal">
+  <section class="reveal" id="training-certificates">
     <h2>Training & Certificates</h2>
     <div class="cert-grid">
       <img src="certs/cert1.jpg" alt="Certificate 1">
