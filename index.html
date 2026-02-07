@@ -197,6 +197,43 @@
       transform: translateY(0);
     }
 
+    /* FLOATING NAV */
+    .floating-nav {
+      position: fixed;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 900;
+      opacity: 0.3;
+      transition: opacity 0.3s ease;
+    }
+
+    .floating-nav:hover {
+      opacity: 1;
+    }
+
+    .floating-nav a {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: var(--card);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+      font-size: 1.1rem;
+    }
+
+    .floating-nav a:hover {
+      transform: scale(1.1);
+      background: var(--main);
+      color: var(--bg);
+    }
+
     /* MOBILE */
     @media (max-width: 600px) {
       .hero h1 {
@@ -205,14 +242,34 @@
       .cert-grid {
         grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
       }
+      .floating-nav {
+        right: 10px;
+      }
+      .floating-nav a {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
 
 <body>
 
+  <!-- FLOATING NAV -->
+  <nav class="floating-nav">
+    <a href="#hero" title="Home"><i class="fas fa-home"></i></a>
+    <a href="#skills" title="Technical Skills"><i class="fas fa-code"></i></a>
+    <a href="#bootcamp" title="IT Bootcamp"><i class="fas fa-graduation-cap"></i></a>
+    <a href="#project" title="Featured Project"><i class="fas fa-laptop-code"></i></a>
+    <a href="#va" title="Virtual Assistant"><i class="fas fa-headset"></i></a>
+    <a href="#bpo" title="BPO Experience"><i class="fas fa-building"></i></a>
+    <a href="#certs" title="Certificates"><i class="fas fa-certificate"></i></a>
+    <a href="#contact" title="Contact"><i class="fas fa-envelope"></i></a>
+  </nav>
+
   <!-- HERO -->
-  <section class="hero reveal">
+  <section class="hero reveal" id="hero">
     <div class="hero-content">
       <h1>Al Jun Mado</h1>
       <span><em>Associate Software Engineer | Virtual Assistant</em></span>
@@ -223,7 +280,7 @@
   </section>
 
   <!-- TECH -->
-  <section class="reveal">
+  <section class="reveal" id="skills">
     <h2>Technical Skills</h2>
     <div class="skill-grid">
       <div class="skill">Python</div>
@@ -242,7 +299,7 @@
   </section>
 
   <!-- BOOTCAMP -->
-  <section class="reveal">
+  <section class="reveal" id="bootcamp">
     <h2>IT Bootcamp</h2>
     <div class="card">
       <h3>NIT Program</h3>
@@ -267,7 +324,7 @@
   </section>
 
   <!-- PROJECT -->
-  <section class="reveal">
+  <section class="reveal" id="project">
     <h2>Featured Project</h2>
     <div class="card project">
       <h3>Mandaluyong PWD Care Hub PH</h3>
@@ -296,7 +353,7 @@
   </section>
 
   <!-- VA -->
-  <section class="reveal">
+  <section class="reveal" id="va">
     <h2>Virtual Assistant</h2>
     <h3>Skills</h3>
     <div class="skill-grid">
@@ -328,7 +385,7 @@
   </section>
 
   <!-- BPO -->
-  <section class="reveal">
+  <section class="reveal" id="bpo">
     <h2>BPO & Corporate Experience</h2>
     <div class="card">
       <p>
@@ -375,7 +432,7 @@
   </section>
 
   <!-- CONTACT -->
-  <section class="reveal contact">
+  <section class="reveal contact" id="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:aljun.mado@gmail.com">aljun.mado@gmail.com</a></p>
     <p>Phone: +63 963 532 1451</p>
