@@ -13,11 +13,13 @@ Visit the live portfolio here: **[https://aljunmado.github.io/portfolio/](https:
 ## 📂 Sections
 1.  **Hero:** Introduction and professional summary.
 2.  **Technical Skills:** Python, SQL, Power BI, SDLC, and more.
-3.  **Featured Project:** Mandaluyong PWD Care Hub PH.
-4.  **Virtual Assistant:** Tools and skills for remote support.
-5.  **Certificates:** A gallery of completed training and certifications.
+3.  **IT Bootcamp:** Industry-aligned training in software development and data.
+4.  **Featured Project:** Mandaluyong PWD Care Hub PH.
+5.  **Virtual Assistant:** Tools and skills for remote support.
+6.  **BPO & Corporate Experience:** Experience in content moderation and customer support.
+7.  **Certificates:** A gallery of completed training and certifications.
 
-## 🚀 How to Run Locally
+## � How to Run Locally
 1.  Clone the repository:
     ```bash
     git clone https://github.com/aljunmado/portfolio.git
