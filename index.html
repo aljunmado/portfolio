@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Al Jun Mado - Associate Software Engineer and Virtual Assistant specializing in Python, SQL, and Power BI." />
+  <title>Al Jun Mado | Portfolio</title>
+
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg: #f0dfc8;
+      --main: #795833;
+      --sub: #303030;
+      --accent: #b08968;
+      --card: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--sub);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--main);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h1, h2, h3 {
+      color: var(--main);
+    }
+
+    h2 {
+      margin-bottom: 24px;
+      font-size: 2rem;
+    }
+
+    p {
+      margin-bottom: 12px;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero span {
+      font-size: 1.2rem;
+      color: var(--sub);
+    }
+
+    .hero-content p {
+      font-size: 1.05rem;
+      max-width: 550px;
+    }
+
+    /* CARD */
+    .card {
+      background: var(--card);
+      padding: 24px;
+      border-radius: 16px;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    /* SKILLS */
+    .skill-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .skill {
+      background: var(--card);
+      padding: 16px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      min-height: 70px;
+
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    }
+
+    .skill:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    /* PROJECT */
+    .project-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .project img {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 12px;
+    }
+
+    /* CERTIFICATES */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .cert-grid img {
+      width: 100%;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .cert-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    /* MODAL */
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.8);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .modal img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+    }
+
+    /* CONTACT */
+    .contact p {
+      font-size: 1.1rem;
+    }
+
+    /* SCROLL REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section class="hero reveal">
+    <div class="hero-content">
+      <h1>Al Jun Mado</h1>
+      <span><i>Associate Software Engineer | Virtual Assistant</i></span>
+      <p style="margin-top:20px; text-align: justify;">
+        Associate Software Engineer with a strong background in remote operations, CRM systems, and customer-facing technical support. Experienced in data handling, process improvement, and cross-functional collaboration, supported by formal training in SDLC, Python, SQL, Power BI, and applied Generative AI tools. Built and deployed an accessible web platform using HTML, CSS, and JavaScript. Known for adaptability, problem-solving, and translating real-world business requirements into practical technical solutions.
+      </p>
+    </div>
+  </section>
+
+  <!-- TECH -->
+  <section class="reveal">
+    <h2>Technical Skills</h2>
+    <div class="skill-grid">
+      <div class="skill">Python</div>
+      <div class="skill">SQL</div>
+      <div class="skill">Power BI</div>
+      <div class="skill">Generative AI & ChatGPT</div>
+      <div class="skill">SDLC</div>
+      <div class="skill">Data Analytics</div>
+      <div class="skill">Cybersecurity Basics</div>
+      <div class="skill">IT Support</div>
+      <div class="skill">Basic Web Development</div>
+      <div class="skill">UI / UX Design</div>
+      <div class="skill">Project Management</div>
+      <div class="skill">Digital Marketing & E-commerce</div>
+    </div>
+  </section>
+
+  <!-- PROJECT -->
+  <section class="reveal">
+    <h2>Featured Project</h2>
+    <div class="card project">
+      <h3>Mandaluyong PWD Care Hub PH</h3>
+      <ul style="padding-left: 20px; margin-bottom: 20px;">
+        <li>Developed a web-based, accessibility-focused information platform for Persons with Disabilities (PWDs) in Mandaluyong City.</li>
+        <li>Centralized PWD ID application guides, benefits & discounts, government programs, employment and legal rights into a single, easy-to-navigate system.</li>
+        <li>Implemented HTML, CSS, and JavaScript to create a responsive, static website deployed via GitHub Pages.</li>
+        <li>Designed accessibility-oriented features, including persistent side navigation, keyword search with voice input, highlighted search results, and hover-based text zoom.</li>
+        <li>Applied inclusive design principles to support users with physical, sensory, and cognitive disabilities.</li>
+        <li>Conducted manual functional, usability, and accessibility testing to ensure clarity, reliability, and cross-browser compatibility.</li>
+        <li>Collaborated in a team environment following structured planning, design, implementation, testing, and deployment phases.</li>
+      </ul>
+      <div class="project-links">
+        <a href="https://mariellelxx.github.io/PWDCareHubPH/index.html" target="_blank" class="project-btn">
+          <i class="fas fa-globe"></i> View Website
+        </a>
+        <a href="https://github.com/marielleLxx/PWDCareHubPH" target="_blank" class="project-btn">
+          <i class="fab fa-github"></i> View on GitHub
+        </a>
+      </div>
+      <hr><img src="projects/pwd-care-hub1.png" alt="Project Screenshot (placeholder)">
+      <hr><img src="projects/pwd-care-hub2.png" alt="Project Screenshot (placeholder)">
+      <hr><img src="projects/pwd-care-hub3.png" alt="Project Screenshot (placeholder)">
+      <hr><img src="projects/pwd-care-hub4.png" alt="Project Screenshot (placeholder)">
+    </div>
+  </section>
+
+  <!-- VA -->
+  <section class="reveal">
+    <h2>Virtual Assistant</h2>
+    <h3>Skills</h3>
+    <div class="skill-grid">
+      <div class="skill">Admin & Remote Support</div>
+      <div class="skill">CRM Management</div>
+      <div class="skill">Lead Generation</div>
+      <div class="skill">Email & Calendar Support</div>
+      <div class="skill">Data Entry & Reporting</div>
+      <div class="skill">Customer Support</div>
+      <div class="skill">(Chat / Email / Voice)</div>
+      <div class="skill">Facebook Ads Management</div>
+    </div>
+  <br>
+    <h3>Tools</h3>
+    <div class="skill-grid">
+      <div class="skill">Zoho CRM</div>
+      <div class="skill">LinkedIn Sales Navigator</div>
+      <div class="skill">Google Docs & Sheets</div>
+      <div class="skill">Gmail & Google Calendar</div>
+      <div class="skill">Microsoft Word & Excel</div>
+      <div class="skill">Canva</div>
+      <div class="skill">Dropbox</div>
+      <div class="skill">Mailchimp</div>
+      <div class="skill">Buffer</div>
+      <div class="skill">Basecamp</div>
+      <div class="skill">AI Tools</div>
+      <div class="skill">Facebook Ads Manager</div>
+    </div>
+  </section>
+
+  <!-- BPO -->
+  <section class="reveal">
+    <h2>BPO & Corporate Experience</h2>
+    <div class="card">
+      <p>
+        My professional foundation was built in the BPO industry, where I developed resilience, communication skills, and operational precision.
+        <br>My experience includes:
+      </p>
+      <ul style="padding-left: 20px; margin-top: 10px; margin-bottom: 10px;">
+        <li><strong>Content Moderation:</strong> Ensured online community safety by strictly adhering to platform policies and resolving escalations.</li>
+        <li><strong>Activation Specialist:</strong> Managed utility service activations and coordinated with providers to ensure seamless client setups.</li>
+        <li><strong>Chat & Back-Office Support:</strong> Delivered high-quality support with a 95% resolution rate and maintained accuracy in airline ticketing records.</li>
+        <li><strong>Customer Service:</strong> Managed product inquiries, returns, and billing concerns via phone, delivering empathetic and solution-oriented service.</li>
+      </ul>
+      <p>
+        These roles have trained me to adapt quickly to new tools and processes—skills I now apply to software engineering and virtual assistance.
+      </p>
+    </div>
+  </section>
+
+  <!-- CERTIFICATES -->
+  <section class="reveal">
+    <h2>Training & Certificates</h2>
+    <div class="cert-grid">
+      <img src="certs/cert1.jpg" alt="Certificate 1">
+      <img src="certs/cert2.jpg" alt="Certificate 2">
+      <img src="certs/cert3.jpg" alt="Certificate 3">
+      <img src="certs/cert4.jpg" alt="Certificate 4">
+      <img src="certs/cert5.jpg" alt="Certificate 5">
+      <img src="certs/cert6.jpg" alt="Certificate 6"> 
+      <img src="certs/cert7.jpg" alt="Certificate 7">
+      <img src="certs/cert8.jpg" alt="Certificate 8">
+      <img src="certs/cert9.jpg" alt="Certificate 9">
+      <img src="certs/cert10.jpg" alt="Certificate 10">
+      <img src="certs/cert11.jpg" alt="Certificate 11">
+      <img src="certs/cert12.jpg" alt="Certificate 12">
+      <img src="certs/cert13.jpg" alt="Certificate 13">
+      <img src="certs/cert14.jpg" alt="Certificate 14">
+      <img src="certs/cert15.jpg" alt="Certificate 15">
+      <img src="certs/cert16.jpg" alt="Certificate 16">
+      <img src="certs/cert17.jpg" alt="Certificate 17">
+      <img src="certs/cert18.jpg" alt="Certificate 18">
+      <img src="certs/cert19.jpg" alt="Certificate 19">
+      <img src="certs/cert20.jpg" alt="Certificate 20">
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="reveal contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:aljun.mado@gmail.com">aljun.mado@gmail.com</a></p>
+    <p>Phone: +63 963 532 1451</p>
+    <p>Caloocan City, Metro Manila, Philippines</p>
+  </section>
+
+  <!-- MODAL -->
+  <div class="modal" id="modal">
+    <img id="modalImg" alt="Expanded certificate preview">
+  </div>
+
+  <script>
+    // Scroll Reveal
+    const reveals = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.15 });
+
+    reveals.forEach(r => observer.observe(r));
+
+    // Certificate Modal
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modalImg");
+
+    document.querySelectorAll(".cert-grid img").forEach(img => {
+      img.addEventListener("click", () => {
+        modal.style.display = "flex";
+        modalImg.src = img.src;
+      });
+    });
+
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape") {
+        modal.style.display = "none";
+      }
+    });
+
+    modal.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+  </script>
+
+</body>
+</html>
