@@ -17,7 +17,8 @@ Visit the live portfolio here: **[https://aljunmado.github.io/portfolio/](https:
 4.  **Featured Project:** Mandaluyong PWD Care Hub PH.
 5.  **Virtual Assistant:** Tools and skills for remote support.
 6.  **BPO & Corporate Experience:** Experience in content moderation and customer support.
-7.  **Certificates:** A gallery of completed training and certifications.
+7.  **Training & Certificates:** A gallery of completed training and certifications.
+8.  **Contact:** Email, phone, and location details.
 
 ## � How to Run Locally
 1.  Clone the repository:
