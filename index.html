@@ -161,7 +161,6 @@
     .carousel-track img {
       min-width: 100%;
       margin-top: 0;
-      cursor: pointer;
     }
 
     .carousel-btn {
@@ -568,7 +567,7 @@
     const modal = document.getElementById("modal");
     const modalImg = document.getElementById("modalImg");
 
-    document.querySelectorAll(".cert-grid img, .carousel-track img").forEach(img => {
+    document.querySelectorAll(".cert-grid img").forEach(img => {
       img.addEventListener("click", () => {
         modal.style.display = "flex";
         modalImg.src = img.src;
