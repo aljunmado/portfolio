@@ -300,6 +300,30 @@
       color: var(--bg);
     }
 
+    /* LOGOS */
+    .company-logos {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-top: 24px;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .company-logos img {
+      max-height: 100px;
+      max-width: 100px;
+      object-fit: contain;
+      opacity: 0.8;
+      transition: transform 0.3s;
+      border-radius: 12px;
+    }
+
+    .company-logos img:hover {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+
     /* MOBILE */
     @media (max-width: 600px) {
       .hero h1 {
@@ -477,6 +501,13 @@
       <p>
         These roles have trained me to adapt quickly to new tools and processes—skills I now apply to software engineering and virtual assistance.
       </p>
+      <div class="company-logos">
+        <img src="bpo/logo1.png" alt="Company 1">
+        <img src="bpo/logo2.png" alt="Company 2">
+        <img src="bpo/logo3.png" alt="Company 3">
+        <img src="bpo/logo4.png" alt="Company 4">
+        <img src="bpo/logo5.png" alt="Company 5">
+      </div>
     </div>
   </section>
 
