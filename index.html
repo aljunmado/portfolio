@@ -96,12 +96,8 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     }
 
-    .link-underline {
-      text-decoration: underline;
-    }
-
     .link-underline:hover {
-      text-decoration-thickness: 2px;
+      text-decoration: underline;
     }
 
     /* SKILLS */
@@ -228,6 +224,24 @@
       transform: scale(1.05);
     }
 
+    /* CONTACT */
+    .contact p {
+      font-size: 1.1rem;
+    }
+
+    .contact i {
+      width: 30px;
+      text-align: center;
+      margin-right: 10px;
+      color: var(--main);
+    }
+
+    .contact a {
+      color: var(--sub);
+      text-decoration: none;
+      font-weight: normal;
+    }
+
     /* MODAL */
     .modal {
       position: fixed;
@@ -243,11 +257,6 @@
       max-width: 90%;
       max-height: 90%;
       border-radius: 12px;
-    }
-
-    /* CONTACT */
-    .contact p {
-      font-size: 1.1rem;
     }
 
     /* SCROLL REVEAL */
@@ -540,9 +549,10 @@
   <!-- CONTACT -->
   <section class="reveal contact" id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:aljun.mado@gmail.com">aljun.mado@gmail.com</a></p>
-    <p>Phone: +63 963 532 1451</p>
-    <p>Caloocan City, Metro Manila, Philippines</p>
+    <p><i class="fas fa-envelope"></i> <a href="mailto:aljun.mado@gmail.com" class="link-underline">aljun.mado@gmail.com</a></p>
+    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/qr/BYFW6XCKQPHSK1" class="link-underline">+63 963 532 1451</a></p>
+    <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/al-jun-mado-9606122b3" class="link-underline">al-jun-mado-9606122b3</a></p>
+    <p><i class="fas fa-map-marker-alt"></i> <a href="https://maps.app.goo.gl/WoyXrJ7qjzuc7N9KA" class="link-underline">Caloocan City, Metro Manila, Philippines</a></p>
   </section>
 
   <!-- MODAL -->
