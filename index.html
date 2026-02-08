@@ -161,6 +161,7 @@
     .carousel-track img {
       min-width: 100%;
       margin-top: 0;
+      cursor: pointer;
     }
 
     .carousel-btn {
@@ -168,7 +169,7 @@
       top: 50%;
       transform: translateY(-50%);
       background: var(--main);
-      color: var(--card);
+      color: var(--bg);
       border: none;
       width: 40px;
       height: 40px;
@@ -179,10 +180,11 @@
       justify-content: center;
       transition: all 0.3s;
       z-index: 10;
-      opacity: 0.3;
+      opacity: 0.8;
     }
 
     .carousel-btn:hover {
+      background: var(--accent);
       opacity: 1;
     }
 
@@ -536,7 +538,7 @@
     const modal = document.getElementById("modal");
     const modalImg = document.getElementById("modalImg");
 
-    document.querySelectorAll(".cert-grid img").forEach(img => {
+    document.querySelectorAll(".cert-grid img, .carousel-track img").forEach(img => {
       img.addEventListener("click", () => {
         modal.style.display = "flex";
         modalImg.src = img.src;
@@ -562,6 +564,7 @@
     if (track) {
       const slides = Array.from(track.children);
       let slideIndex = 0;
+      const slideInterval = 3000; // Change this value to adjust speed (e.g., 5000 for 5s)
       let autoSlideInterval;
 
       // Create dots
@@ -591,14 +594,14 @@
 
       function resetTimer() {
         clearInterval(autoSlideInterval);
-        autoSlideInterval = setInterval(() => goToSlide(slideIndex + 1), 3000);
+        autoSlideInterval = setInterval(() => goToSlide(slideIndex + 1), slideInterval);
       }
 
       prevBtn.addEventListener('click', () => goToSlide(slideIndex - 1));
       nextBtn.addEventListener('click', () => goToSlide(slideIndex + 1));
 
       // Start auto slide
-      autoSlideInterval = setInterval(() => goToSlide(slideIndex + 1), 3000);
+      autoSlideInterval = setInterval(() => goToSlide(slideIndex + 1), slideInterval);
     }
   </script>
 
