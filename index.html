@@ -489,6 +489,17 @@
       <div class="skill">AI Tools</div>
       <div class="skill">Facebook Ads Manager</div>
     </div>
+  <br>
+    <div class="carousel">
+      <div class="carousel-track">
+        <img src="va/work1.jpg" alt="VA Work">
+        <img src="va/work2.jpg" alt="VA Work">
+        <img src="va/work3.jpg" alt="VA Work">
+      </div>
+      <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+      <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+    <div class="carousel-dots"></div>
   </section>
 
   <!-- BPO -->
@@ -510,11 +521,11 @@
         These roles have trained me to adapt quickly to new tools and processes—skills I now apply to software engineering and virtual assistance.
       </p>
       <div class="company-logos">
-        <img src="bpo/logo1.png" alt="Logo 1">
-        <img src="bpo/logo2.png" alt="Logo 2">
-        <img src="bpo/logo3.png" alt="Logo 3">
-        <img src="bpo/logo4.png" alt="Logo 4">
-        <img src="bpo/logo5.png" alt="Logo 5">
+        <img src="bpo/logo1.png" alt="Logo">
+        <img src="bpo/logo2.png" alt="Logo">
+        <img src="bpo/logo3.png" alt="Logo">
+        <img src="bpo/logo4.png" alt="Logo">
+        <img src="bpo/logo5.png" alt="Logo">
       </div>
     </div>
   </section>
@@ -523,26 +534,26 @@
   <section class="reveal" id="certs">
     <h2>Training & Certificates</h2>
     <div class="cert-grid">
-      <img src="certs/cert1.jpg" alt="Certificate 1">
-      <img src="certs/cert2.jpg" alt="Certificate 2">
-      <img src="certs/cert3.jpg" alt="Certificate 3">
-      <img src="certs/cert4.jpg" alt="Certificate 4">
-      <img src="certs/cert5.jpg" alt="Certificate 5">
-      <img src="certs/cert6.jpg" alt="Certificate 6"> 
-      <img src="certs/cert7.jpg" alt="Certificate 7">
-      <img src="certs/cert8.jpg" alt="Certificate 8">
-      <img src="certs/cert9.jpg" alt="Certificate 9">
-      <img src="certs/cert10.jpg" alt="Certificate 10">
-      <img src="certs/cert11.jpg" alt="Certificate 11">
-      <img src="certs/cert12.jpg" alt="Certificate 12">
-      <img src="certs/cert13.jpg" alt="Certificate 13">
-      <img src="certs/cert14.jpg" alt="Certificate 14">
-      <img src="certs/cert15.jpg" alt="Certificate 15">
-      <img src="certs/cert16.jpg" alt="Certificate 16">
-      <img src="certs/cert17.jpg" alt="Certificate 17">
-      <img src="certs/cert18.jpg" alt="Certificate 18">
-      <img src="certs/cert19.jpg" alt="Certificate 19">
-      <img src="certs/cert20.jpg" alt="Certificate 20">
+      <img src="certs/cert1.jpg" alt="Certificate">
+      <img src="certs/cert2.jpg" alt="Certificate">
+      <img src="certs/cert3.jpg" alt="Certificate">
+      <img src="certs/cert4.jpg" alt="Certificate">
+      <img src="certs/cert5.jpg" alt="Certificate">
+      <img src="certs/cert6.jpg" alt="Certificate"> 
+      <img src="certs/cert7.jpg" alt="Certificate">
+      <img src="certs/cert8.jpg" alt="Certificate">
+      <img src="certs/cert9.jpg" alt="Certificate">
+      <img src="certs/cert10.jpg" alt="Certificate">
+      <img src="certs/cert11.jpg" alt="Certificate">
+      <img src="certs/cert12.jpg" alt="Certificate">
+      <img src="certs/cert13.jpg" alt="Certificate">
+      <img src="certs/cert14.jpg" alt="Certificate">
+      <img src="certs/cert15.jpg" alt="Certificate">
+      <img src="certs/cert16.jpg" alt="Certificate">
+      <img src="certs/cert17.jpg" alt="Certificate">
+      <img src="certs/cert18.jpg" alt="Certificate">
+      <img src="certs/cert19.jpg" alt="Certificate">
+      <img src="certs/cert20.jpg" alt="Certificate">
     </div>
   </section>
 
@@ -594,54 +605,58 @@
       modal.style.display = "none";
     });
 
-    // Project Carousel
-    const track = document.querySelector('.carousel-track');
-    const dotsContainer = document.querySelector('.carousel-dots');
-    const prevBtn = document.querySelector('.carousel-btn.prev');
-    const nextBtn = document.querySelector('.carousel-btn.next');
+    // Carousels
+    const carousels = document.querySelectorAll('.carousel');
 
-    if (track) {
-      const slides = Array.from(track.children);
-      let slideIndex = 0;
-      const slideInterval = 5000; // Change this value to adjust speed (e.g., 5000 for 5s)
-      let autoSlideInterval;
+    carousels.forEach(carousel => {
+      const track = carousel.querySelector('.carousel-track');
+      const prevBtn = carousel.querySelector('.carousel-btn.prev');
+      const nextBtn = carousel.querySelector('.carousel-btn.next');
+      const dotsContainer = carousel.nextElementSibling;
 
-      // Create dots
-      slides.forEach((_, index) => {
-        const dot = document.createElement('div');
-        dot.classList.add('dot');
-        if (index === 0) dot.classList.add('active');
-        dot.addEventListener('click', () => goToSlide(index));
-        dotsContainer.appendChild(dot);
-      });
+      if (track && dotsContainer && dotsContainer.classList.contains('carousel-dots')) {
+        const slides = Array.from(track.children);
+        let slideIndex = 0;
+        const slideInterval = 5000;
+        let autoSlideInterval;
 
-      const dots = document.querySelectorAll('.dot');
+        // Create dots
+        slides.forEach((_, index) => {
+          const dot = document.createElement('div');
+          dot.classList.add('dot');
+          if (index === 0) dot.classList.add('active');
+          dot.addEventListener('click', () => goToSlide(index));
+          dotsContainer.appendChild(dot);
+        });
 
-      function updateCarousel() {
-        track.style.transform = `translateX(-${slideIndex * 100}%)`;
-        dots.forEach(d => d.classList.remove('active'));
-        if (dots[slideIndex]) dots[slideIndex].classList.add('active');
-      }
+        const dots = Array.from(dotsContainer.children);
 
-      function goToSlide(index) {
-        slideIndex = index;
-        if (slideIndex < 0) slideIndex = slides.length - 1;
-        if (slideIndex >= slides.length) slideIndex = 0;
-        updateCarousel();
-        resetTimer();
-      }
+        function updateCarousel() {
+          track.style.transform = `translateX(-${slideIndex * 100}%)`;
+          dots.forEach(d => d.classList.remove('active'));
+          if (dots[slideIndex]) dots[slideIndex].classList.add('active');
+        }
 
-      function resetTimer() {
-        clearInterval(autoSlideInterval);
+        function goToSlide(index) {
+          slideIndex = index;
+          if (slideIndex < 0) slideIndex = slides.length - 1;
+          if (slideIndex >= slides.length) slideIndex = 0;
+          updateCarousel();
+          resetTimer();
+        }
+
+        function resetTimer() {
+          clearInterval(autoSlideInterval);
+          autoSlideInterval = setInterval(() => goToSlide(slideIndex + 1), slideInterval);
+        }
+
+        prevBtn.addEventListener('click', () => goToSlide(slideIndex - 1));
+        nextBtn.addEventListener('click', () => goToSlide(slideIndex + 1));
+
+        // Start auto slide
         autoSlideInterval = setInterval(() => goToSlide(slideIndex + 1), slideInterval);
       }
-
-      prevBtn.addEventListener('click', () => goToSlide(slideIndex - 1));
-      nextBtn.addEventListener('click', () => goToSlide(slideIndex + 1));
-
-      // Start auto slide
-      autoSlideInterval = setInterval(() => goToSlide(slideIndex + 1), slideInterval);
-    }
+    });
   </script>
 
 </body>
