@@ -152,11 +152,34 @@
     .carousel-track {
       display: flex;
       transition: transform 0.5s ease-in-out;
+      width: 100%;
+    }
+
+    .carousel-track > * {
+      min-width: 100%;
+      flex: 0 0 100%;
     }
 
     .carousel-track img {
-      min-width: 100%;
+      width: 100%;
+      height: auto;
+      display: block;
       margin-top: 0;
+    }
+
+    .carousel-slide {
+      position: relative;
+    }
+
+    .carousel-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(121, 88, 51, 0.7);
+      color: #fff;
+      padding: 12px;
+      text-align: center;
     }
 
     .carousel-btn {
@@ -492,9 +515,18 @@
   <br>
     <div class="carousel">
       <div class="carousel-track">
-        <img src="va/work1.jpg" alt="VA Work">
-        <img src="va/work2.jpg" alt="VA Work">
-        <img src="va/work3.jpg" alt="VA Work">
+        <div class="carousel-slide">
+          <img src="va/va1.png" alt="VA Screenshot">
+          <div class="carousel-caption">Title</div>
+        </div>
+        <div class="carousel-slide">
+          <img src="va/va2.png" alt="VA Screenshot">
+          <div class="carousel-caption">Title</div>
+        </div>
+        <div class="carousel-slide">
+          <img src="va/va3.png" alt="VA Screenshot">
+          <div class="carousel-caption">Title</div>
+        </div>
       </div>
       <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
       <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
