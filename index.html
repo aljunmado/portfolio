@@ -306,6 +306,7 @@
       z-index: 900;
       opacity: 0.3;
       transition: opacity 0.3s ease;
+      align-items: flex-end;
     }
 
     .floating-nav:hover {
@@ -313,20 +314,43 @@
     }
 
     .floating-nav a {
-      width: 45px;
+      min-width: 45px;
       height: 45px;
-      border-radius: 50%;
+      padding: 0;
+      border-radius: 50px;
       background: var(--card);
       display: flex;
       align-items: center;
       justify-content: center;
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+      transition: all 0.3s ease;
       font-size: 1.1rem;
+      overflow: hidden;
+    }
+
+    .floating-nav a::after {
+      content: attr(title);
+      max-width: 0;
+      opacity: 0;
+      margin-left: 0;
+      white-space: nowrap;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+      font-weight: 600;
     }
 
     .floating-nav a:hover {
-      transform: scale(1.1);
+      padding: 0 20px;
+    }
+
+    .floating-nav a:hover::after {
+      max-width: 200px;
+      opacity: 1;
+      margin-left: 10px;
+    }
+
+    .floating-nav a:hover {
+      transform: scale(1.05);
       background: var(--main);
       color: var(--bg);
     }
@@ -374,7 +398,15 @@
       .floating-nav a {
         width: 35px;
         height: 35px;
+        min-width: 35px;
         font-size: 0.9rem;
+      }
+      .floating-nav a:hover {
+        padding: 0;
+        width: 35px;
+      }
+      .floating-nav a:hover::after {
+        display: none;
       }
     }
   </style>
